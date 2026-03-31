@@ -1,0 +1,33 @@
+{
+  "total_mas": 6229,
+  "actionable": 78,
+  "actionable_pct": 1.3,
+  "not_yet": 6151,
+  "criteria_failure_rates": {
+    "significance": 85.7,
+    "prediction_interval": 66.1,
+    "robustness": 47.4,
+    "audit_flags": 29.5,
+    "evidence_volume": 51.4,
+    "pub_bias": 12.6
+  },
+  "most_common_single_failure": "robustness",
+  "single_failure_counts": {
+    "robustness": 116,
+    "evidence_volume": 21,
+    "audit_flags": 8
+  },
+  "reviews_with_any_actionable": 42,
+  "reviews_all_actionable": 0,
+  "fragility_not_covered": 963,
+  "waterfall": {
+    "total": 6229,
+    "after_significance": 888,
+    "after_prediction_interval": 383,
+    "after_robustness": 167,
+    "after_audit_flags": 99,
+    "after_evidence_volume": 78,
+    "after_pub_bias": 78
+  },
+  "elapsed_seconds": 50.2
+}
