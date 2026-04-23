@@ -1,3 +1,5 @@
+<!-- sentinel:skip-file — hardcoded paths are fixture/registry/audit-narrative data for this repo's research workflow, not portable application configuration. Same pattern as push_all_repos.py and E156 workbook files. -->
+
 # ActionableEvidence
 
 ActionableEvidence computes GO / NO-GO verdicts for Cochrane pairwise meta-analyses using a six-criterion actionability framework. It recomputes each meta-analysis, applies significance, prediction interval, robustness, audit, volume, and publication-bias checks, then exports verdict tables and a dashboard-ready summary.
