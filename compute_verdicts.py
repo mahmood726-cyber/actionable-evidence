@@ -16,8 +16,23 @@ import sys
 import time
 from pathlib import Path
 
-# MetaAudit imports
-sys.path.insert(0, "C:/MetaAudit")
+# MetaAudit imports. Resolve the metaaudit package location robustly: honor an
+# explicit METAAUDIT_DIR env override first, then fall back to known install
+# locations. The first directory that actually contains a metaaudit/ package
+# wins; nothing is inserted if none resolve (import will then fail loudly).
+_METAAUDIT_CANDIDATES = [
+    os.environ.get("METAAUDIT_DIR"),
+    "C:/MetaAudit",
+    "C:/Projects/MetaAudit",
+    "C:/Projects/metaaudit",
+    "F:/Projects/metaaudit",
+    "C:/Models/ActionableEvidence",
+]
+for _candidate in _METAAUDIT_CANDIDATES:
+    if _candidate and os.path.isdir(os.path.join(_candidate, "metaaudit")):
+        if _candidate not in sys.path:
+            sys.path.insert(0, _candidate)
+        break
 from metaaudit.loader import load_all_reviews, DataType  # noqa: E402
 from metaaudit.recompute import recompute_ma  # noqa: E402
 
