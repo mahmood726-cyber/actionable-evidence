@@ -202,7 +202,7 @@ A horizontal bar chart showing the percentage of all 6229 meta-analyses that fai
 
 ## References
 
-1. Higgins JPT, Thomas J, Chandler J, et al, eds. *Cochrane Handbook for Systematic Reviews of Interventions*. Version 6.4. Cochrane; 2023.
+1. Higgins JPT, Thomas J, Chandler J, et al, eds. *Cochrane Handbook for Systematic Reviews of Interventions*. Version 6.4. Cochrane; 2023. Available from: https://training.cochrane.org/handbook
 
 2. Veroniki AA, Jackson D, Bender R, et al. Methods to calculate uncertainty in the estimated overall effect size from a random-effects meta-analysis. *Res Synth Methods*. 2019;10(1):23-43. doi:10.1002/jrsm.1319
 

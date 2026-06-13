@@ -4,8 +4,24 @@ import sys
 import os
 import math
 
-sys.path.insert(0, "C:/MetaAudit")
-sys.path.insert(0, "C:/Models/ActionableEvidence")
+# Make compute_verdicts importable regardless of clone location: the package
+# under test is the parent of this tests/ directory.
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
+
+# Locate the metaaudit package. Try known install locations; the first that
+# contains a metaaudit/ package wins. Falls back to the original layout.
+for _candidate in (
+    "C:/MetaAudit",
+    "C:/Projects/metaaudit",
+    "F:/Projects/metaaudit",
+    "C:/Models/ActionableEvidence",
+):
+    if os.path.isdir(os.path.join(_candidate, "metaaudit")):
+        if _candidate not in sys.path:
+            sys.path.insert(0, _candidate)
+        break
 
 import numpy as np
 import pytest
